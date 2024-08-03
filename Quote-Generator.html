@@ -1,0 +1,114 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Quote.css" />
+  <title>Quote Generate</title>
+  </head>
+    <body>
+      <h1>Random Quote Generator</h1>
+        <div class="quote-container">
+          <button onclick="displayQuote()" id="btn">Generate Quote</button>
+            <p id="quoteA" ></p>
+            <p id="authorB"></p>
+        </div>
+    </body>
+  <script>
+
+  const randomQuote =[
+
+        {
+        text: "Be the change you wish to see in the world",
+        author: "Mahatma Gandhi"
+        } ,
+
+        {
+        text:"Believe you can and you're halfway there.",
+        author:"Theodore Roosevelt"
+        },  
+
+        {
+
+        text: "The future belongs to those who believe in the beauty of their dreams.",
+        author:"Eleanor Roosevelt"
+
+        },
+
+        {
+
+        text:"It does not matter how slowly you go as long as you do not stop.",
+        author: "Confucius"
+
+        },
+
+        {
+        text:"You miss 100% of the shots you don't take.",
+        author: "Wayne Gretzky"
+
+        },
+
+        {
+        text: "I have not failed. I've just found 10,000 ways that won't work.",
+        author: "Thomas Edison"
+        },
+
+        {
+        text:"You are never too old to set another goal or to dream a new dream.",
+        author:"Lewis"
+
+        },
+
+        {
+
+        text: "The best way to predict your future is to create it.",
+        author: "Abraham Lincoln"
+
+        },
+
+        {
+        text: "You don't have to be great to start, but you have to start to be great.",
+        author:"Zig Ziglar"
+
+
+        },
+
+        {
+        text: "The biggest risk is not taking any risk.",
+        author: "Mark Zuckerberg"
+
+        },
+
+        {
+          
+        text:"The best revenge is massive success.",
+        author:"Frank Sinatra"
+          
+        }
+
+  ]
+  // function to get the random quote
+      function getRandom(){
+        const randomNumberIndex= Math.floor(Math.random()* randomQuote.length );
+        return randomQuote[randomNumberIndex]
+      }
+
+  function displayQuote (){
+    const quote  = document.getElementById('quoteA')
+    const author  = document.getElementById('authorB')
+
+  const getRandom1 =getRandom();
+    quote.innerHTML = getRandom1.text;
+    author.innerHTML= getRandom1.author;
+    //`${randomQuote.author}`
+    //author.textContent = `${getRandom1.author}`; 
+
+
+    const newQuoteButton = document.getElementById("btn");
+    newQuoteButton.addEventListener("click", displayQuote);
+
+  }   
+
+
+  </script>
+  </html>

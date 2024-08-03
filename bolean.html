@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    
+    <button
+      onclick="
+        let computerMove= ''
+            const randomNumber=(Math.random())
+            if(randomNumber > 0 && randomNumber < 1/3){
+                computerMove='Rock'
+            }else if(randomNumber > 1/3 && randomNumber < 2/3){
+                computerMove='Paper'
+            }else if(randomNumber > 2/3 && randomNumber < 1){
+                computerMove='Scissors'
+            }
+        //console.log(computerMove)
+
+        // comparing computer move to player's move
+        let result= ''
+        if(computerMove === 'Rock'){
+            result='You Tie'
+        }else if(computerMove === 'Paper'){
+            result='You Lose'
+        }else if(computerMove === 'Scissors'){
+            result=' You win'
+        }
+        alert(` You picked Rock. Computer picked ${computerMove},${result}.`)
+            "
+    >
+      Rock
+    </button>
+    <!--paper button-->
+    <button
+      onclick="
+        let computerMove2= ''
+            const randomNumber2=(Math.random())
+            if(randomNumber2 > 0 && randomNumber2 < 1/3){
+                computerMove='Rock'
+            }else if(randomNumber2 > 1/3 && randomNumber2 < 2/3){
+                computerMove2='Paper'
+            }else if(randomNumber2 > 2/3 && randomNumber2 < 1){
+                computerMove2='Scissors'
+            }
+
+            let result2= ''
+        if(computerMove2 === ''){
+            result2='You Tie'
+        }else if(computerMove2 === 'Paper'){
+            result2='You Lose'
+        }else if(computerMove2 === 'Scissors'){
+            result2=' You win'
+        }
+        alert(` You picked Paper. Computer picked ${computerMove2},${result2}.`)
+        "
+    >
+      Paper
+    </button>
+    <button onclick="
+    
+    let computerMove3= ''
+            const randomNumber3=(Math.random())
+            if(randomNumber3 > 0 && randomNumber3 < 1/3){
+                computerMove3='Rock'
+            }else if(randomNumber3 > 1/3 && randomNumber3 < 2/3){
+                computerMove3='Paper'
+            }else if(randomNumber3 > 2/3 && randomNumber3 < 1){
+                computerMove3='Scissors'
+            }
+        //console.log(computerMove)
+
+        // comparing computer move to player's move
+        let result3= ''
+        if(computerMove3 === 'Scissors'){
+            result3='You Tie'
+        }else if(computerMove3 === 'Paper'){
+            result3='You Lose'
+        }else if(computerMove3 === 'Scissors'){
+            result3='You win'
+        }
+        alert(` You picked Scissors. Computer picked ${computerMove3}, ${result3}.`)
+"
+    >Scissors</button>
+  <script>
+
+const newEntry={
+color:"green",
+background: "white",
+height:40,
+}
+
+const newJsonString=(JSON.stringify(newEntry))
+    console.log(JSON.parse(newJsonString))
+
+localStorage.setItem('course','English-Language')
+const data1=localStorage.getItem('course')
+console.log(data1)
+
+ 
+const myObj={
+height: 5,
+age: 45,
+skinColor: 'black',
+country:"Nigeria",
+
+
+
+ }
+/*
+localStorage.setItem("nationality", "myObj")
+console.log(localStorage.getItem("nationality"))
+*/
+localStorage.setItem("nationality", JSON.stringify(myObj))
+console.log(JSON.parse(localStorage.getItem('nationality')))
+//to demonstrate default value in parameter
+ function myName( a, b=4){
+
+  return a * b
+ }
+const collectedData=myName(5)
+console.log(collectedData)
+
+    const objData = {
+        backgroundColor: 'green',
+        color: 'Pink',
+        height: 40,
+        age: 60,
+    }
+
+    const { backgroundColor, color } = objData
+//so here, we take out a property called backgroundColor from the object and stors it in a variable called backgroundColor
+    console.log(backgroundColor)
+
+    console.log(color)
+
+const objData2=objData.age
+console.log(objData2)
+
+</script>
+
+
+
+
+
+</body>
+</html>
